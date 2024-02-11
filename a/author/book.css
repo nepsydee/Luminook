@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins" , sans-serif;
+}
+:root{
+  --orange: #FFA500;
+--white: #ffffff;
+--gray: #f5f5f5;
+--black1: #000000;
+--black2: #777777;
+--green: #8de02c;
+--red: #FF0000;
+--orange: #FFA500;
+}
+
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container{
+position: relative;
+width: 100%;
+}
+
+/* -------------------------------navigation-------------------- */
+.navigation{
+position: fixed;
+width: 300px;
+height: 100%;
+background: var(--orange);
+border-left: 10px solid var(--orange);
+transition: 0.5s;
+overflow: hidden;
+  }
+
+  .navigation.active{
+    width: 80px;
+  }
+
+.navigation ul{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+.navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered{
+  background-color:var(--white);
+}
+
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a{
+  position: relative;
+  display: block;
+  display: flex;
+  width: 100%;
+text-decoration: none;
+color: var(--white);
+}
+
+
+.navigation ul li a:hover,
+.navigation ul li.hovered a{
+  color: var(--black1);
+
+}
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+  font-size: 1.75rem;
+}
+
+.navigation ul li a .title{
+  position: relative;
+display: block;
+padding: 0 10px;
+height: 60px;
+line-height: 60px;
+text-align: start;
+white-space: nowrap;
+}
+
+
+
+
+/* -------------curvepart---------------- */
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+content: "";
+position: absolute;
+right: 0;
+top: -50px;
+width: 50px;
+height: 50px;
+background-color: transparent;
+border-radius: 50%;
+box-shadow: 35px 35px 0 10px var(--white);
+pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+  }
+
+
+
+  /* ---------------------------sidebar 2------------------ */
+  
+.navigation ul li a .titl{
+  position: relative;
+display: block;
+padding: 0 10px;
+height: 50px;
+line-height: 50px;
+text-align: center;
+white-space: nowrap;
+font-size: 15px;
+
+}
+
+.navigation ul li a .ico{
+  position: relative;
+  display: block;
+  color: transparent;
+  min-width:60px;
+  height: 20px;
+  line-height: 25px;
+  text-align: center;
+  width: 15px;
+}
+
+
+.navigation ul li a .ico ion-icon{
+  font-size: 1.30rem;
+  color: transparent;
+}
+
+.navigation ul li a .ic{
+  position: relative;
+  display: block;
+  min-width:60px;
+  height: 20px;
+  line-height: 70px;
+  text-align: center;
+  width: 15px;
+}
+.navigation ul li a .ic ion-icon{
+  font-size: 1.30rem;
+}
+
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+    
+
+/* ---------------------------------------sidebar------------------------ */
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: center;
+  margin-right: 100px;
+  cursor: pointer;
+  outline: none;
+}
+/* ------------------menu part----------------- */
+
+  .main{
+    position: absolute;
+width: calc(100% - 300px);
+left: 300px;
+min-height: 100vh;
+background: var(--white);
+transition: 0.5s;
+  }
+
+  .main.active{
+  left: 80px;
+  width: calc(100% -80px);
+  }
+  .topbar{
+width: 100%;
+height: 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 60px;
+  }
+
+  .toggle{
+position: relative;
+width: 60px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2.5rem;
+cursor: pointer;
+  }
+
+  .search{
+    position: relative;
+    width: 400px;
+   margin: 0 10px;
+   padding-top: 25px;
+  }
+
+  .search label{
+    position: relative;
+    width: 100%;
+  }
+  .search label input{
+width: 100%;
+height: 40px;
+border-radius: 40px;
+padding-left: 35px;
+font-size: 18px;
+outline: none;
+padding: 5px 40px;
+border: 1px solid var(--black2);
+  }
+
+.search label ion-icon{
+position: absolute;
+padding: 0 10PX;
+top: 0;
+left: 5px;
+font-size: 1.2rem;
+  }
+  
+  .user{
+position: relative;
+width: 100px;
+height: 100px;
+border-radius: none;
+overflow: hidden;
+cursor: pointer;
+  }
+
+  .user a img{
+position: absolute;
+top: 0;
+left: 0;
+margin-left: 15px;
+width: 100%;  
+height: 100%;
+object-fit: cover;
+}
+
+
+    
+  
+/* --------------------------------------------------------users---------------------- */
+
+/* -------------------------------------------------- */
+h1 {
+  color: var(--black1);
+}
+h2 {
+  color: var(--orange);
+}
+
+p {
+  color: #666;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border: 1px solid #ddd;
+  font-family: 'Courier New', monospace;
+}
+
+/* --------------------book library----------------- */
+.card{
+  margin: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+   width: 12%;
+   display: inline-block;
+   /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+   border-radius: 5px; 
+   margin: 1%;
+   margin-left: 150px;
+   overflow: hidden;
+   background-color: transparent;
+  }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  
+
+ 
+ }
+
+ .des p{
+    text-align: center;
+  padding: 10px;
+
+ }
+ .des h3{
+    text-align: center;
+  padding: 10px;
+
+ }
+
+.des{
+  padding: 2px;
+  text-align: center;
+ background-color: transparent;
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.des button a{
+  color: var(--orange);
+}
+.des button a:hover{
+  color: var(--white);
+}
+button {
+  background: transparent;
+  color: white;
+  border:none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding:10px;
+}
+button a{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  padding:10px;
+}
+button a:hover{
+  background-color: var(--orange);
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+ a button{
+  padding: 10px;
+  width: 10%;
+  display: inline-block;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 5px; 
+  margin: 2%;
+  font-size: 17px;
+  color: var(--orange);
+  /* margin-right: 92px; */
+  margin-top: 20px;
+  margin-left:15px;
+  margin-bottom: 40px;
+  font-weight: 30%;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: transparent;
+  }
+  .cards .des a button:hover{
+   
+     background-color: var(--orange);
+     color: var(--white);
+   transition: .5s ease;
+    
+    }
+  
+
+
+
+  /* --------------------------------responsive design-------------------------------------------------- */
+
+  @media (max-width: 991px) {
+    .navigation{
+      left: -300px;
+    }
+.navigation.active{
+  width: 300px;
+  left: 0;
+}
+.main{
+  width: 100%;
+  left: 0;
+}
+.main.active{
+left: 300px;
+}
+#mymodel{
+  width: 100%;
+  left:-140%;
+    }
+.signup{
+width: 100%;
+left:0;
+  }
+}
+
+  @media (max-width: 768px) {
+    #mymodel .signup{
+      grid-template-columns: 1fr;
+    }
+
+  }
+@media (max-width: 480px) {
+.user{
+  min-width: 40px;
+}
+.navigation{
+  width: 100%;
+  left: -100%;
+  z-index: 1000;
+}
+.navigation.active{
+width: 100%;
+left: 0;
+}
+.toggle{
+z-index: 1000;
+}
+.main.active .toggle{
+color: #ffffff;
+}
+
+  }
