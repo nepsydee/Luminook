@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins" , sans-serif;
+}
+:root{
+  --blue: #006eff;
+--white: #ffffff;
+--gray: #f5f5f5;
+--black1: #000000;
+--black2: #777777;
+--green: #8de02c;
+--red: #FF0000;
+--re: #fd8181;
+--orange: #FFA500;
+--oran: #ffd477;
+}
+
+body{
+  background: rgba(233, 233, 233, 0.08);
+}
+/* --------------------------------------------------------------card */
+
+      .details .signup{
+        position: relative;
+        width: 90%;
+        margin-top: 130px;
+        margin-left: 92px;
+        display: flexbox;
+        min-height: 650px;
+        background: var(--white);
+        padding: 30px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+          }
+        
+          .details .cardheader{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+              }
+
+
+    .cardheader h2{
+      font-size: 37px;
+      font-weight: 600;
+      color: var(--blue);
+      cursor: default;
+    }
+
+    .cardheader .btn{
+      position: relative;
+      padding: 5px 10px;
+      text-decoration: underline;
+      color: var(--blue);
+      border-radius: 6px;
+      font-weight: 600;
+       }
+
+     .cardheader .btn:hover{
+     color: rgb(17, 1, 241);
+     text-shadow: 0 0 50px rgba(0, 238, 255, 0.8);
+       }
+
+   .details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+     }
+    
+     .details table thead td{
+    font-weight: 600;
+    padding: 10px;
+     }
+    
+     .details .signup table tr{
+     color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .details .signup table tr:last-child{
+      border-bottom: none;
+    }
+    
+    
+    .details .signup table tbody tr:hover{
+     background: var(--blue);
+     color: var(--white);
+     }
+     .details .signup table tr td{
+      padding: 10px 20px;
+     } 
+    
+     .details .signup table tr td:last-child{
+     text-align: center;
+    }
+    .details .signup table tr td:nth-child(2){
+      text-align: center;
+     }
+     .details .signup table tr td:nth-child(3){
+      text-align: center;
+     
+     }
+     .details .signup table tr td:nth-child(4){
+      text-align: center;
+     }
+     .details .signup table tr td:nth-child(5){
+      text-align: center;
+    
+     }
+     .details .signup table tr td:nth-child(6){
+      text-align: center;
+     }
+
+     .status.returned
+     {
+     background: var(--green);
+       padding: 2px 4px;
+     border-radius: 4px;
+     font-size: 14px;
+     font-weight: 500;
+     
+     }
+     .status.borrowed
+     {
+     background: var(--orange);
+       padding: 2px 4px;
+     border-radius: 4px;
+     font-size: 14px;
+     font-weight: 500;
+     }

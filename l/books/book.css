@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins" , sans-serif;
+}
+:root{
+  --blue: #006eff;
+--white: #ffffff;
+--gray: #f5f5f5;
+--black1: #000000;
+--black2: #777777;
+--green: #8de02c;
+--red: #FF0000;
+--orange: #FFA500;
+}
+
+body{
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container{
+position: relative;
+width: 100%;
+}
+
+.main{
+
+    margin: 2%;
+   }
+   
+/* ................logo------------- */
+.logo{
+    width: 150px;
+    margin: auto;
+    position: inherit;
+}
+ a img{
+    width: 150px;
+    padding: 10px;
+    margin: auto;
+}
+   /* --------------------book library----------------- */
+.card{
+     width: 15%;
+     display: inline-block;
+     /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+     border-radius: 5px; 
+     padding: 20px;
+     margin: 2%;
+     margin-left: 50px;
+     overflow: hidden;
+     margin-top: -60px;
+     background-color: transparent;
+     margin-bottom: 80px;
+     padding: 20px;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  
+
+ 
+ }
+
+ .des p{
+    text-align: center;
+  padding: 10px;
+
+ }
+ .des h3{
+    text-align: center;
+  padding: 10px;
+
+ }
+
+.des{
+  padding: 2px;
+  text-align: center;
+ background-color: transparent;
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button {
+  background: transparent;
+  color: white;
+  border:none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding:10px;
+}
+button a{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  padding:10px;
+}
+button a:hover{
+  background-color: var(--blue);
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+ a button{
+  padding: 10px;
+   width: 10%;
+   display: inline-block;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+   border-radius: 5px; 
+   margin: 2%;
+   font-size: 17px;
+   color: var(--blue);
+   margin-right: 75px;
+   font-weight: 30%;
+   text-decoration: none;
+   overflow: hidden;
+   margin-left: 115px;
+   background-color: transparent;
+  }
+  .cards .des a button:hover{
+   
+     background-color: var(--blue);
+     color: var(--white);
+   transition: .5s ease;
+    
+    }
