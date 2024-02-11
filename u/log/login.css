@@ -1,0 +1,157 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+:root{
+--yellow: #F9DB00;
+--white: #fff;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--yellow);
+  padding: 30px;
+  text-decoration: none;
+}
+.container{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: var(--white);
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  perspective: 2700px;
+}
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+.container .cover::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--yellow);
+  opacity: 0.5;
+  z-index: 12;
+}
+.container .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+.form-content .login-form{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+.forms .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px; 
+  background: var(--yellow);
+}
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.form-content .input-box input:valid{
+  border-color:#F9DB00;
+}
+
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box i{
+  position: absolute;
+  color: var(--yellow);
+  font-size: 17px;
+}
+
+
+.forms .form-content .button{
+  color: var(--white);
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: var(--white);
+  background: var(--yellow);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+
+
+@media (max-width: 730px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
